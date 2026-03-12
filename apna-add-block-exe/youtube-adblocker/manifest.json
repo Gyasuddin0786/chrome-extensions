@@ -1,10 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Apna YouTube Ad Blocker Pro",
-  "description": "Automatically skip and block YouTube ads",
+  "description": "Modern YouTube ad blocker with smart detection",
   "version": "1.0",
 
-  "permissions": ["storage", "scripting", "activeTab"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
 
   "host_permissions": [
     "*://www.youtube.com/*"
@@ -14,22 +18,23 @@
     "service_worker": "background.js"
   },
 
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "YouTube Ad Blocker"
-  },
-
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/*"],
-      "js": ["content.js"],
+      "js": ["content/adblock.js"],
       "run_at": "document_idle"
     }
   ],
 
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "options_page": "settings/settings.html",
+
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/chrome-logo.png",
+    "48": "icons/chrome-logo.png",
+    "128": "icons/chrome-logo.png"
   }
 }
