@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Apna Dev  Tab",
+  "description": "Apna Developer daily dashboard with tools, focus & custom wallpaper",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "apnatab.html"
+  },
+  "icons": {
+    "128": "assets/icons/chrome-icon.png"
+  }
+}

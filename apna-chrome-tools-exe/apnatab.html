@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Apna Dev Tab</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="app">
+
+        <!-- LEFT -->
+        <div class="left">
+
+            <div class="card">
+                <h1 id="time"></h1>
+                <p id="date"></p>
+            </div>
+
+            <div class="card">
+                <p id="greeting"></p>
+                <input id="nameInput" placeholder="Your name" />
+            </div>
+
+            <div class="card">
+                <h3>🎯 Today’s Focus</h3>
+                <input id="focusInput" placeholder="What will you build today?" />
+            </div>
+
+            <div class="card">
+                <div class="row">
+                    <h3>📝 Add Todos</h3>
+                    <button id="toggleTodo">👁️</button>
+                </div>
+
+                <div id="todoBox">
+                    <input id="todoInput" placeholder="Type todo & press Enter" />
+                    <ul id="todoList"></ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+
+            <div class="card">
+                <div class="row">
+                    <h3>🚀 Developer Tools</h3>
+                    <button id="toggleTools">👁️</button>
+                    <button id="themeBtn">🌓</button>
+
+                </div>
+
+                <div id="toolsGrid"></div>
+
+                <input id="toolInput" placeholder="Paste tool URL & Enter" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom card">
+        <label for="fileInput" class="btn" style="margin-top: 10px;">📁 </label>
+        <input type="file" id="fileInput" hidden accept="image/*" />
+
+        <input id="urlInput" placeholder="Image URL & Enter" />
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
